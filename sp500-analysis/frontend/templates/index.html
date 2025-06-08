@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&P 500 Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>S&P 500 Predictor</h1>
+        <div class="prediction-box">
+            <button id="predict-btn">Get Tomorrow's Prediction</button>
+            <div id="results" class="hidden">
+                <div class="result-item">
+                    <h3>Estimated Return:</h3>
+                    <p id="prediction"></p>
+                </div>
+                <div class="result-item">
+                    <h3>Current Price:</h3>
+                    <p id="current-price"></p>
+                </div>
+                <div class="result-item">
+                    <h3>Estimated Tomorrow's Price:</h3>
+                    <p id="estimated-price"></p>
+                </div>
+            </div>
+            <div id="error" class="hidden">
+                <p class="error-message"></p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
