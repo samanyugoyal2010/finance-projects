@@ -1,0 +1,118 @@
+/* styles.css */
+
+/* Basic body styling */
+body {
+    font-family: sans-serif; /* Use a common sans-serif font */
+    margin: 20px; /* Add some margin around the content */
+    color: #333; /* Default text color */
+    background-color: #f8f9fa; /* Light background for the page */
+}
+
+/* Styling for flash messages */
+.flash {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Specific style for success messages (like 'AAPL added') */
+/* Assuming you add class="success" in your Flask flash message */
+.flash.success {
+    color: #155724; /* Dark green text */
+    background-color: #d4edda; /* Light green background */
+    border-color: #c3e6cb; /* Green border */
+}
+
+/* Styling for the form */
+form {
+    margin-bottom: 30px; /* Space below the form */
+    padding: 20px;
+    background-color: #fff; /* White background for the form area */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center items */
+    gap: 10px; /* Space between form elements */
+}
+
+form label {
+    font-weight: bold;
+    margin-right: 5px; /* Space after label */
+}
+
+form input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1; /* Allow input to take available space */
+    min-width: 150px; /* Minimum width */
+}
+
+form input[type="submit"] {
+    padding: 8px 15px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Table styling */
+table {
+    width: 100%; /* Make table take full width */
+    border-collapse: collapse; /* Collapse borders into a single line */
+    margin-top: 20px; /* Space above the table */
+    background-color: #fff; /* White background for the table */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    border-radius: 5px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensure border-radius clips content */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light grey border for cells */
+    padding: 12px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+    vertical-align: middle; /* Align content vertically */
+}
+
+/* Table header styling */
+thead th {
+    background-color: #e9ecef; /* Light grey background for header */
+    font-weight: bold; /* Make header text bold */
+    color: #495057; /* Darker text color for header */
+}
+
+/* Alternating row colors for readability (optional) */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Very light grey for even rows */
+}
+
+/* Styling for positive/negative change values */
+td.positive {
+    color: green;
+    font-weight: bold;
+}
+
+td.negative {
+    color: red;
+    font-weight: bold;
+}
+
+/* Styling for the 'Remove' link */
+td a {
+    color: #dc3545; /* Red color for remove link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #a71d2a; /* Darker red on hover */
+}
